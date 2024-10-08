@@ -3,5 +3,5 @@ name: TFSqlServer
 version: 1.0.0
 summary: Create a SQL server and upload backup.
 description: Create Sql with data.
-runner: TerraForm
-templatePath: main.tf  
+runner: ARM
+templatePath: azuredeploy.json  
