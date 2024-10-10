@@ -8,23 +8,21 @@ param location string = 'eastus2' // This needs to stay eastus2
 
 @description('The principal ids of users to assign the role of DevCenter Project Admin.  Users must either have DevCenter Project Admin or DevCenter Dev Box User role in order to create a Dev Box.')
 param projectAdmins array = [
-  'c8307c6a-8539-4540-8e45-e8fa520fd93c' // rbest
+  '<ObjId>'
 ]
 
 @description('The principal ids of users to assign the role of DevCenter Dev Box User.  Users must either have DevCenter Project Admin or DevCenter Dev Box User role in order to create a Dev Box.')
 param devBoxUsers array = [
-  'c8307c6a-8539-4540-8e45-e8fa520fd93c' // rbest
-  '36d7224b-8dc1-4a01-89c3-358d8f0ac3eb' // ariabest
+  '<ObjId>'
 ]
 
 @description('The principal ids of users to assign the role of DevCenter Deployment Environments User.  Users must either have Deployment Environments User role in order to create a Environments.')
 param environmentUsers array = [
-  'c8307c6a-8539-4540-8e45-e8fa520fd93c' //rbest
-  '36d7224b-8dc1-4a01-89c3-358d8f0ac3eb' //ariabest
+  '<ObjId>'  
 ]
 
 // Podcast-CI
-param ciPrincipalId string = 'de408100-4e1f-4508-ae24-799cb44bdb74'
+param ciPrincipalId string = '<ObjId>'
 
 @description('Github Uri')
 param githubUri string = 'https://github.com/RBDDcet/DevCatalogs.git'
@@ -32,13 +30,13 @@ param githubUri string = 'https://github.com/RBDDcet/DevCatalogs.git'
 //@secure()
 @description('[Environments] Personal Access Token from GitHub with the repo scope')
 //#disable-next-line secure-parameter-default
-param githubPat string = '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'
+param githubPat string = '<Not secure>'
 
 @description('Github Path')
 param githubPath string = '/DevCenter/Catalogs'
 
 @description('Primary subscription')
-param primarySubscription string = '572b41e6-5c44-486a-84d2-01d6202774ac'
+param primarySubscription string = '<SubId>'
 
 @description('Tags to apply to the resources')
 param tags object = {}
@@ -47,23 +45,23 @@ param tags object = {}
 param projects array = [
   {
     name: 'PNL_Alpha_DEV'
-    subscriptionId: '572b41e6-5c44-486a-84d2-01d6202774ac'
+    subscriptionId: '<SubId>'
   }
   {
     name: 'PNL_Bravo_DEV'
-    subscriptionId: '572b41e6-5c44-486a-84d2-01d6202774ac'
+    subscriptionId: '<SubId>'
   }
   {
     name: 'PNL_Charlie_DEV'
-    subcriptionId:'572b41e6-5c44-486a-84d2-01d6202774ac'
+    subcriptionId: '<SubId>'
   }
 ]
 
 @description('[Environments] An object with property keys containing the Environment Type name and values containing Subscription and Description properties. See bicep file for example.')
 param environmentTypes object = {
-  Dev: '572b41e6-5c44-486a-84d2-01d6202774ac' // Contoso-Inc Dev
-  Test: '572b41e6-5c44-486a-84d2-01d6202774ac' // Contoso-Inc Test
-  Prod: '572b41e6-5c44-486a-84d2-01d6202774ac' // Contoso-Inc Prod
+  Dev: '<SubId>'
+  Test: '<SubId>'
+  Prod: '<SubId>'
 }
 
 // clean up the keyvault name an add a suffix to ensure it's unique

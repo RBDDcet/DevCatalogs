@@ -1,2 +1,0 @@
-name: InstallWSL
-command: "./installwsl.ps1"
