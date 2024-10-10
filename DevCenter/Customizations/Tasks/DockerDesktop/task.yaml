@@ -1,2 +1,0 @@
-name: InstallDockerDesktop
-command: "./dockerdesktop.ps1"
